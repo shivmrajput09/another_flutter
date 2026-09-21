@@ -20,7 +20,7 @@ class _ChangeColorState extends State<ChangeColor> {
     setState(() {
       _containerColor = Color(
         (Random().nextDouble() * 0xFFFFFF).toInt(),
-      ).withOpacity(1.0);
+      ).withValues(alpha: 1.0);
 
       // Har click par 45 degree (pi / 4) ghumega
       _rotationAngle += pi / 4;
@@ -68,7 +68,7 @@ class _ChangeColorState extends State<ChangeColor> {
                   borderRadius: BorderRadius.circular(20),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.black.withOpacity(0.4),
+                      color: Colors.black.withValues(alpha: 0.4),
                       blurRadius: 15,
                       offset: const Offset(8, 8),
                     ),
